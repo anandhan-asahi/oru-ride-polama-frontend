@@ -21,7 +21,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 		// if (!accessToken && pathname !== "/login" && pathname !== "/") {
 		// 	router.push("/login");
 		// }
-	});
+	}, []);
 
 	return (
 		<>

@@ -2,6 +2,14 @@ import React, { useEffect, useState } from "react";
 import RideCard from "components/Rides/RideCard";
 import axios from "utils/axios";
 
+interface RideProps {
+	_id: any;
+	name: any;
+	price: any;
+	imageUrl: any;
+	date: any;
+}
+
 const Rides = () => {
 	const [rides, setRides] = useState([]);
 	const [error, setError] = useState("");
@@ -34,8 +42,12 @@ const Rides = () => {
 	return (
 		<div className="flex flex-col h-full w-full justify-center items-center gap-5">
 			{rides.length > 0 ? (
-				rides.map((ride) => (
-					<RideCard ride={ride} onDelete={onDeleteHandler} />
+				rides.map((ride: RideProps) => (
+					<RideCard
+						key={ride._id}
+						ride={ride}
+						onDelete={onDeleteHandler}
+					/>
 				))
 			) : (
 				<div className="p-10 bg-gray-200/90 rounded-xl shadow-lg text-gray-900 border border-gray-400/30">
