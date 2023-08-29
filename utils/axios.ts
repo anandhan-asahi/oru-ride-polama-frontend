@@ -2,7 +2,7 @@ import Base from "axios";
 
 const axios = Base.create({
 	withCredentials: true,
-	baseURL: process.env.NEXT_PUBLIC_HOST_URL,
+	baseURL: process.env.NEXT_PUBLIC_API_URL,
 });
 
 axios.interceptors.request.use(
