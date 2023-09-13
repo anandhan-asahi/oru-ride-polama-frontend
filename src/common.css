@@ -1,6 +1,9 @@
 .custom-spin {
 	animation: spin 50s linear infinite;
 }
+.testing {
+	background-color: brown;
+}
 
 @keyframes spin {
 	0% {
